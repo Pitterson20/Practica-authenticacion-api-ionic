@@ -1,7 +1,8 @@
 import type { OrdersResponse } from '@/interfaces/orders';
 
-// URL base de la API, definida en el archivo .env (VITE_API_URL)
-const API_URL = import.meta.env.VITE_API_URL || 'https://ds4-demo-5w8lmtds.on-forge.com/api';
+// URL base de la API, definida en el archivo .env (VITE_API_URL).
+// En desarrollo se usa /api para pasar por el proxy de Vite y evitar CORS.
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 // Clave con la que se guarda el token en el almacenamiento del navegador
 const TOKEN_KEY = 'pedidos_app_token';

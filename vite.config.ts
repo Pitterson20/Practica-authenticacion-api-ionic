@@ -11,6 +11,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      // En desarrollo, las peticiones a /api se reenvían al servidor real
+      // desde Vite para evitar el bloqueo CORS del navegador.
+      '/api': {
+        target: 'https://ds4-demo-5w8lmtds.on-forge.com',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',
