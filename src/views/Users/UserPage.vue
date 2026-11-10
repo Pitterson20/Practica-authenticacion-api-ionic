@@ -10,7 +10,7 @@
     </ion-header>
     <ion-content :fullscreen="true">
      
-    <ion-card>
+    <ion-card v-if="usuario?.id">
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
       <ion-card-title>{{ usuario?.name }}</ion-card-title>
@@ -29,6 +29,7 @@
         </p>
     </ion-card-content>
   </ion-card>
+  <p v-else>No se pudo obtener la informacion del usuario</p>
      
     </ion-content>
   </ion-page>
