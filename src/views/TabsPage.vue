@@ -17,6 +17,11 @@
           <ion-icon aria-hidden="true" :icon="square" />
           <ion-label>Crear Post</ion-label>
         </ion-tab-button>
+
+        <ion-tab-button tab="tab4" href="/tabs/tab4">
+          <ion-icon aria-hidden="true" :icon="receipt" />
+          <ion-label>Órdenes</ion-label>
+        </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -24,5 +29,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { ellipse, square, triangle, people } from 'ionicons/icons';
+import { ellipse, square, people, receipt } from 'ionicons/icons';
 </script>
